@@ -4,9 +4,6 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +19,136 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-input {
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  background-color: #fff;
+  margin-right: 8px;
+  padding-left: 16px;
+
+}
+
+.form-input:hover {
+  border-color: black;
+}
+
+input:focus {
+  border: 2px solid #4e75ff;
+  outline-color: #4e75ff;
+}
+
+::placeholder {
+  color: #808080;
+}
+
+.btn-submit {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 100px;
+  height: 44px;
+  background: #4e75ff;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.btn-submit:hover {
+  background-color: #6c8cff;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+img {
+  object-fit: cover;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.gallery {
+  border: 1px solid #646363;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.discrabe-list {
+  display: flex;
+  align-content: center;
+}
+
+.discrabe-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.btn-load {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-load.is-hidden {
+  display: none;
+  background-color: #95aaf6;
+}
+
+.btn-load:hover {
+  background-color: #6c8cff;
+}
+
+.loading {
+  display: none;
+  justify-content: center;
+}
+
+.loader {
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #646363;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.loader:after {
+  content: '';
+  height: 4px;
+  width: 0%;
+  display: block;
+  background: #467bed;
+  animation: 5s lineGrow linear infinite;
+}
+
+@keyframes lineGrow {
+  to {
+    width: 100%;
+  }
 }
