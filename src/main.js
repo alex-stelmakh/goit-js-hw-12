@@ -53,6 +53,7 @@ async function getPictureByValue(evt) {
     params.maxPage = Math.ceil(totalHits / params.per_page);
     if (hits.length > 0 && hits.length !== totalHits) {
       enableLoadMore(btnLoad);
+      btnLoad.removeEventListener('click', handleBtnLoad);
       btnLoad.addEventListener('click', handleBtnLoad);
     } else {
       hideLoadMore(btnLoad);
