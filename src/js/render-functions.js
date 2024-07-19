@@ -4,6 +4,11 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery-container');
+const lightbox = new SimpleLightbox('.gallery a', {  
+  captionDelay: 250,  
+  captionsData: 'alt',  
+  captionPosition: 'bottom',  
+});  
 
 export function inputPictures(hits) {
   const hitsList = hits
@@ -40,11 +45,8 @@ export function inputPictures(hits) {
     hideLoading();
     return errorParams();
   }
-  const lightbox = new SimpleLightbox('.gallery a', {
-    captionDelay: 250,
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-  }).refresh();
+  
+  lightbox.refresh();
   hideLoading();
 }
 
